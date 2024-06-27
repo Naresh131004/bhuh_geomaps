@@ -1,6 +1,8 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
 
+st.set_page_config(layout="wide")
+
 markdown = """
 Website
 <https://www.bhuhpramaan.com>
@@ -24,30 +26,25 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Interactive Map")
+st.title("Heatmap")
 
 st.markdown(
     """
-    The Interactive Map allows you to engage with the map in various ways, such as zooming in and out, and has various basemap. The basemap allows the user to get more information about the Bangalore Map.
+    A heatmap is a visual representation of data that uses color variations to represent the density of data points in a particular area. It's a useful tool for understanding patterns, trends, and distributions within a dataset.
     """
 )
 
-col1, col2 = st.columns([4, 1])
-options = list(leafmap.basemaps.keys())
-index = options.index("OpenTopoMap")
-
-with col2:
-
-    basemap = st.selectbox("Select a basemap:", options, index)
-
-
-with col1:
-
-    m = leafmap.Map(center=[12.971599,77.594566], zoom=9.8,
-        locate_control=True, latlon_control=True, draw_export=True, minimap_control=True
+filepath = "https://raw.githubusercontent.com/Naresh131004/bhuh_geomaps/main/BangaloreAreaLatLongDetails%20(1).csv"
+m = leafmap.Map(center=[12.971599,77.594566], zoom=10.8)
+m.add_heatmap(
+    filepath,
+    latitude="Latitude",
+    longitude="Longitude",
+    value="Pop_max",
+    name="Heat map",
+    radius=22,
     )
-    m.add_basemap(basemap)
-    m.to_streamlit(height=800)
+m.to_streamlit(height=700)
 
 hide_st_style = """
             <style>

@@ -1,25 +1,31 @@
 import streamlit as st
+import pandas as pd
 import leafmap.foliumap as leafmap
 
 st.set_page_config(layout="wide")
 
 markdown = """
-A Streamlit map template
-<https://github.com/opengeos/streamlit-map-template>
+Website
+<https://www.bhuhpramaan.com>
 """
 
 st.sidebar.title("About")
 st.sidebar.info(markdown)
-logo = "https://i.imgur.com/UbOXYAU.png"
+logo = "https://i.imgur.com/MWpI4OI.jpeg"
 st.sidebar.image(logo)
 
-
-st.title("Searching Basemaps")
 st.markdown(
     """
-This app is a demonstration of searching and loading basemaps from [xyzservices](https://github.com/geopandas/xyzservices) and [Quick Map Services (QMS)](https://github.com/nextgis/quickmapservices). Selecting from 1000+ basemaps with a few clicks.
-"""
+    <style>
+    .main .block-container {
+        padding-top: 10px; /* Adjust the value as needed */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
+
+st.title("Searching Basemaps")
 
 with st.expander("See demo"):
     st.image("https://i.imgur.com/0SkUhZh.gif")
@@ -43,10 +49,25 @@ with row1_col2:
         tiles = empty.multiselect("Select XYZ tiles to add to the map:", options)
 
     with row1_col1:
-        m = leafmap.Map()
+        m = leafmap.Map(center=[12.971599,77.594566], zoom=9.8)
 
         if tiles is not None:
             for tile in tiles:
                 m.add_xyz_service(tile)
 
         m.to_streamlit(width, height)
+
+file_path = "https://github.com/Naresh131004/bhuh_geomaps/raw/main/BangaloreAreaLatLongDetails.csv"
+
+df = pd.read_csv(file_path)
+
+st.dataframe(df)
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)

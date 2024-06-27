@@ -1,6 +1,8 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
 
+st.set_page_config(layout="wide")
+
 markdown = """
 Website
 <https://www.bhuhpramaan.com>
@@ -24,30 +26,21 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Interactive Map")
+st.title("Split-panel Map")
 
 st.markdown(
     """
-    The Interactive Map allows you to engage with the map in various ways, such as zooming in and out, and has various basemap. The basemap allows the user to get more information about the Bangalore Map.
+    The Split-panel Map allows you to engage with the map both applications in a single map. On the left side, the satellite image of the Sentinal-2 False color composite. On the right side, the land classification of the bangalore contains vegetation,barren land,etc.,
     """
 )
 
-col1, col2 = st.columns([4, 1])
-options = list(leafmap.basemaps.keys())
-index = options.index("OpenTopoMap")
-
-with col2:
-
-    basemap = st.selectbox("Select a basemap:", options, index)
-
-
-with col1:
-
-    m = leafmap.Map(center=[12.971599,77.594566], zoom=9.8,
-        locate_control=True, latlon_control=True, draw_export=True, minimap_control=True
+m = leafmap.Map(center=[12.971599,77.594566], zoom=9.8)
+m.split_map(
+    left_layer="ESA WorldCover 2020 S2 FCC", right_layer="ESA WorldCover 2020"
     )
-    m.add_basemap(basemap)
-    m.to_streamlit(height=800)
+m.add_legend(title="ESA Land Cover", builtin_legend="ESA_WorldCover")
+
+m.to_streamlit(height=700)
 
 hide_st_style = """
             <style>

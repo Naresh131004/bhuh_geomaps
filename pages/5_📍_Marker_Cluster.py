@@ -4,14 +4,25 @@ import leafmap.foliumap as leafmap
 st.set_page_config(layout="wide")
 
 markdown = """
-A Streamlit map template
-<https://github.com/opengeos/streamlit-map-template>
+Website
+<https://www.bhuhpramaan.com>
 """
 
 st.sidebar.title("About")
 st.sidebar.info(markdown)
-logo = "https://i.imgur.com/UbOXYAU.png"
+logo = "https://i.imgur.com/MWpI4OI.jpeg"
 st.sidebar.image(logo)
+
+st.markdown(
+    """
+    <style>
+    .main .block-container {
+        padding-top: 10px; /* Adjust the value as needed */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.title("Marker Cluster")
 
@@ -34,3 +45,12 @@ with st.expander("See source code"):
         )
 
 m.to_streamlit(height=700)
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)

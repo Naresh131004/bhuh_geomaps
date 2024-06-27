@@ -5,14 +5,25 @@ import leafmap.foliumap as leafmap
 st.set_page_config(layout="wide")
 
 markdown = """
-A Streamlit map template
-<https://github.com/opengeos/streamlit-map-template>
+Website
+<https://www.bhuhpramaan.com>
 """
 
 st.sidebar.title("About")
 st.sidebar.info(markdown)
-logo = "https://i.imgur.com/UbOXYAU.png"
+logo = "https://i.imgur.com/MWpI4OI.jpeg"
 st.sidebar.image(logo)
+
+st.markdown(
+    """
+    <style>
+    .main .block-container {
+        padding-top: 10px; /* Adjust the value as needed */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 @st.cache_data
@@ -65,7 +76,7 @@ with row1_col2:
             )
 
     with row1_col1:
-        m = leafmap.Map(center=(36.3, 0), zoom=2)
+        m = leafmap.Map(center=[12.971599,77.594566], zoom=9.8)
 
         if layers is not None:
             for layer in layers:
@@ -77,3 +88,12 @@ with row1_col2:
             m.add_legend(legend_dict=legend_dict)
 
         m.to_streamlit(width, height)
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
