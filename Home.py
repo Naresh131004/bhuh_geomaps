@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import leafmap.foliumap as leafmap
+import requests
 
 st.set_page_config(layout="wide")
 
@@ -42,9 +43,25 @@ The below map is the classification of the Bangalore wards with their Boundaries
 
 st.markdown(markdown)
 
-m = leafmap.Map(center=[12.971599,77.594566], zoom=9.8)
-heatmap_data_path = "https://github.com/Naresh131004/bhuh_geomaps/blob/main/bangalore_wards.geojson"
-m.add_geojson(heatmap_data_path, layer_name="Bangalore Heatmap")
+m = leafmap.Map(center=[12.971599, 77.594566], zoom=9.8)
+heatmap_data_path = "https://raw.githubusercontent.com/Naresh131004/bhuh_geomaps/main/bangalore_wards.geojson"
+
+def filter_properties(feature):
+    properties = feature["properties"]
+    properties = {k: v for k, v in properties.items() if k not in ["@id", "admin_level"]}
+    feature["properties"] = properties
+    return feature
+
+# Load the GeoJSON data, filter properties, and add to the map
+try:
+    response = requests.get(heatmap_data_path)
+    response.raise_for_status()
+    geojson_data = response.json()
+    filtered_geojson_data = {"type": "FeatureCollection", "features": [filter_properties(f) for f in geojson_data["features"]]}
+    m.add_geojson(filtered_geojson_data, layer_name="Bangalore Heatmap")
+except requests.exceptions.RequestException as e:
+    st.error(f"Error fetching GeoJSON data: {e}")
+
 m.to_streamlit(height=500)
 
 st.header("Bangalore")
@@ -62,11 +79,11 @@ Places with Pincode, Latitude and Longitude:"""
 
 st.markdown(markdown)
 
-file_path = "https://github.com/Naresh131004/bhuh_geomaps/raw/main/BangaloreAreaLatLongDetails.csv"
+file_path = "https://raw.githubusercontent.com/Naresh131004/bhuh_geomaps/main/BangaloreAreaLatLongDetails.csv"
 
-df = pd.read_csv(file_path)
+df = pd.read_csv(file_path, usecols=['Area', 'Pincode', 'Latitude', 'Longitude'])
 
-st.dataframe(df)
+st.dataframe(df,width=2000)
 
 hide_st_style = """
             <style>
