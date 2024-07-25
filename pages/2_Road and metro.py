@@ -1,6 +1,6 @@
 import streamlit as st
-import pandas as pd
 import leafmap.foliumap as leafmap
+import requests
 
 st.set_page_config(layout="wide")
 
@@ -27,22 +27,34 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Road and Metro")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+    Bangalore, known as Bengaluru, has a robust metro and road network. The Namma Metro, launched in 2011, covers over 40 kilometers, connecting key areas like MG Road and Majestic, with expansions in progress. Major roads like MG Road, Bannerghatta Road, and Outer Ring Road ensure city-wide connectivity. Despite rapid urbanization leading to traffic congestion, the city has developed flyovers, underpasses, and signal-free corridors to improve traffic flow. Ongoing projects aim to further enhance connectivity and transportation efficiency, supporting Bangalore's growth as a major tech and economic hub.
     """
 )
 
-# Base URL for the TIF files
-base_url = "https://github.com/Naresh131004/bhuh_geomaps/raw/main/"
+# URL for the GeoJSON file
+geojson_data_url = "https://github.com/geohacker/namma-metro/raw/master/metro-lines-stations.geojson"
 
+# Load the GeoJSON data
+response = requests.get(geojson_data_url)
+geojson_data = response.json()
+
+# Filter GeoJSON to include only 'Name' in the popup
+for feature in geojson_data['features']:
+    properties = feature['properties']
+    filtered_properties = {'Name': properties.get('Name')}
+    feature['properties'] = filtered_properties
+
+# Create a map object
 m = leafmap.Map()
-heatmap_data_path = "https://github.com/Naresh131004/Bhuh-geomaps/raw/main/BANK%20LAYER.geojson"
-m.add_geojson(heatmap_data_path, layer_name="Bangalore Heatmap")
+
+# Add the filtered GeoJSON to the map
+m.add_geojson(geojson_data, layer_name="Bangalore Metro Lines")
+
+# Render the map in Streamlit
 m.to_streamlit(height=800)
 
 hide_st_style = """

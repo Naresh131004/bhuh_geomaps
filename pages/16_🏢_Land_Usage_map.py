@@ -32,9 +32,7 @@ st.title("Land Usage Map")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+   The maps from 2000, 2010, 2020, and 2023, displayed with split bars, show the decadal changes in Bangalore's land use. The split bars illustrate how residential areas have expanded, commercial zones have grown, and industrial zones have developed over time. Green spaces and parks have varied, with some areas being converted for development while new parks have been established. Mixed-use developments have increasingly integrated residential, commercial, and recreational spaces. These visual comparisons highlight the evolution of land use in Bangalore over the past two decades.
     """
 )
 

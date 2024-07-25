@@ -27,13 +27,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Bank Financial Institutions")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+  Bangalore, officially Bengaluru, hosts a robust network of banking and financial institutions that cater to diverse needs. Major national and international banks, including State Bank of India, HDFC Bank, ICICI Bank, and Axis Bank, operate extensively throughout the city, offering a range of services from savings accounts and loans to investment and insurance products. Additionally, numerous financial institutions provide specialized services such as wealth management, brokerage, and financial advisory. Bangalore is also a hub for fintech companies, driving innovation in digital banking and financial services. This comprehensive financial ecosystem supports both individual and corporate financial needs, contributing to the city’s status as a major economic and business center.
     """
 )
 

@@ -27,13 +27,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Citizen Amenities")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+  Bangalore, officially Bengaluru, offers a range of citizen amenities that enhance quality of life. The city boasts an extensive public transportation system, including Namma Metro, buses, and taxis, along with comprehensive healthcare services through numerous hospitals and clinics. It features diverse educational institutions, recreational spots like Cubbon Park and Bangalore Palace, and vibrant shopping and dining options. Reliable utilities, including water supply, electricity, and waste management, are efficiently managed. Public safety is supported by a robust network of police stations and emergency services, making Bangalore a well-equipped and convenient place for its residents and visitors.
     """
 )
 

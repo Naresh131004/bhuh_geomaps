@@ -27,13 +27,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Guidance Value")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+    In Bangalore, the **guidance value** varies by ward, reflecting local property values based on factors such as location and infrastructure. For example, wards in the Central Business District (CBD) like Shanthinagar and Richmond Town have higher guidance values due to their prime locations, while residential areas such as Koramangala and Whitefield have moderate to high values. Peripheral wards like Yelahanka and Electronic City typically have lower guidance values, reflecting their developing status. Industrial areas such as Peenya and Bommasandra have distinct values based on their industrial use. These ward-specific guidance values provide a standardized benchmark for property transactions, registration, and taxation across Bangalore.
     """
 )
 

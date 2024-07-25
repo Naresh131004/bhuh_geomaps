@@ -27,13 +27,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Land Use 2023")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+    As of 2023, Bangalore's land use reflects its rapid growth and urbanization, featuring a diverse mix of residential, commercial, industrial, and green spaces. Residential areas include high-density apartments and traditional neighborhoods, with key zones in Whitefield and Koramangala. Commercial activity is concentrated in business districts like the CBD, Electronic City, and IT hubs. Industrial areas such as Peenya and Bommasandra focus on manufacturing and technology. The city maintains significant green spaces, including Cubbon Park and Lalbagh Botanical Garden, amidst the urban landscape. Additionally, mixed-use developments are increasingly common, blending residential, commercial, and recreational facilities to create integrated communities.
     """
 )
 

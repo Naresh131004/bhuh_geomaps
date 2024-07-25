@@ -27,13 +27,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Hospital")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+    Bangalore, officially Bengaluru, has a well-developed healthcare infrastructure with a variety of hospitals and medical facilities. The city features major government hospitals like Victoria Hospital and Bowring and Lady Curzon Hospital, along with prominent private institutions such as Apollo Hospitals, Manipal Hospital, and Fortis Hospitals. Specialized centers like the Bangalore Cancer Centre and NIMHANS provide advanced care in specific fields. Additionally, numerous diagnostic centers, outpatient clinics, and pharmacies are widely available, ensuring comprehensive medical services. This extensive network supports the city's large population and attracts patients from across India and abroad.
     """
 )
 

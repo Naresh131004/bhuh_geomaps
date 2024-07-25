@@ -27,13 +27,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Airport Connect")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+   Bangalore, officially Bengaluru, is well-connected to domestic and international destinations through Kempegowda International Airport (BLR). Located about 40 kilometers north of the city center, the airport is one of India's busiest and serves as a major hub for both domestic flights and international connections. It features modern facilities, including multiple terminals for domestic and international travel, a wide range of dining and shopping options, and efficient transportation links to the city via taxis, ride-sharing services, and airport shuttles. This connectivity makes Bangalore easily accessible and enhances its status as a key business and travel destination.
     """
 )
 

@@ -27,13 +27,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Parks and Lakes")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+    Bangalore, officially Bengaluru, is known for its green spaces and scenic lakes. Notable parks include Cubbon Park and Lalbagh Botanical Garden, offering recreational areas and beautiful landscapes. The city also features picturesque lakes such as Ulsoor Lake and Bellandur Lake, providing opportunities for boating and relaxation. These natural spaces enhance Bangalore's appeal by offering residents and visitors a refreshing escape from urban life.
     """
 )
 

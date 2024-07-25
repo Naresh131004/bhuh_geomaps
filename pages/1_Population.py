@@ -26,12 +26,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Heatmap")
+st.title("Population")
 
 st.markdown(
     """
-    A heatmap is a visual representation of data that uses color variations to represent the density of data points in a particular area. It's a useful tool for understanding patterns, trends, and distributions within a dataset.
-    """
+   Bangalore, officially known as Bengaluru, is Karnataka's capital with a population of approximately 12.3 million. The city is divided into various wards, managed by the Bruhat Bengaluru Mahanagara Palike (BBMP). Each ward varies in population density and socio-economic status, aiding in efficient urban planning and resource management. Central wards like Shanthinagar, Richmond Town, and Vasanth Nagar, part of the Central Business District (CBD), are densely populated and feature a mix of residential and commercial spaces. Peripheral wards, including Yelahanka and Whitefield, have seen rapid growth due to IT and industrial expansion, leading to increased population influx. This ward-based classification helps address local needs effectively, promoting balanced development and better governance across Bangalore's diverse urban landscape. The city's population continues to grow, driven by its status as a major tech and economic hub.    """
 )
 
 filepath = "https://raw.githubusercontent.com/Naresh131004/bhuh_geomaps/main/BangaloreAreaLatLongDetails%20(1).csv"

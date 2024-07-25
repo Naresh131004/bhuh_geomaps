@@ -27,13 +27,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Bangalore Ward Population")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+    Bangalore's population data, divided across various wards, can be filtered by various parameters such as total population size, density, growth trends, socio-economic factors, and geographical location. This allows for detailed analysis of the most and least populous areas, population density, changes over time, and socio-economic characteristics. Filtering by geographical location, such as central or peripheral wards, also provides insights into the demographic distribution and urban planning needs across the city. This detailed segmentation helps in effective resource allocation and understanding demographic trends in Bangalore.
     """
 )
 

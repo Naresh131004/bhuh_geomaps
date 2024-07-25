@@ -27,13 +27,11 @@ st.markdown(
 
 st.title("Land use and Land classification of Bangalore")
 
-st.title("Land Usage Map")
+st.title("Education")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+   Bangalore, also known as Bengaluru, is a major educational hub in India. The city offers a wide range of schools, including international, national, and public institutions, providing quality education from primary to secondary levels. In higher education, Bangalore is home to numerous colleges and universities specializing in engineering, management, science, arts, and commerce. These institutions, known for their excellence, offer undergraduate, postgraduate, and doctoral programs. With modern facilities, experienced faculty, and vibrant campuses, Bangalore attracts students from across India and the world, making it a key center for learning and innovation. This strong educational infrastructure produces skilled professionals, contributing to the city's status as a knowledge and technology hub.
     """
 )
 
@@ -41,7 +39,7 @@ st.markdown(
 base_url = "https://github.com/Naresh131004/bhuh_geomaps/raw/main/"
 
 m = leafmap.Map()
-heatmap_data_path = "https://github.com/Naresh131004/Bhuh-geomaps/raw/main/BANK%20LAYER.geojson"
+heatmap_data_path = "https://github.com/Naresh131004/Bhuh-geomaps/raw/main/clippedengineeringcollege.geojson"
 m.add_geojson(heatmap_data_path, layer_name="Bangalore Heatmap")
 m.to_streamlit(height=800)
 

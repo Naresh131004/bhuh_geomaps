@@ -25,15 +25,13 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Land use and Land classification of Bangalore")
+st.title("Malls,Market and Shopping areas")
 
 st.title("Land Usage Map")
 
 st.markdown(
     """
-    A land usage map, also known as a land use map, visually represents how different areas of land are utilized in a specific region. These maps are used to display various types of land use categories, such as residential, commercial, industrial, agricultural, forest, water bodies, and undeveloped land.  
-    
-    Choose the year for the left and right to see the split screen view.
+   Bangalore, officially Bengaluru, is renowned for its diverse shopping experiences, featuring a mix of high-end malls, bustling markets, and vibrant shopping areas. Major malls like Phoenix Marketcity, Orion Mall, and UB City offer a range of international and local brands, along with dining and entertainment options. The city also boasts popular markets such as Commercial Street and Russell Market, where shoppers can find everything from clothing and accessories to fresh produce and spices. Areas like Brigade Road and MG Road are known for their eclectic mix of shops and eateries, catering to various tastes and preferences. This blend of modern retail spaces and traditional markets makes Bangalore a dynamic destination for shopping enthusiasts.
     """
 )
 
